@@ -1,21 +1,17 @@
-
 public class Chromebook extends Item{
-	private String os;
+  private String os;
 
-	public Chromebook(String assetTag, String description, String os) {
-		super(assetTag, description);
-		this.os = os;
-	}
+  public Chromebook(String assetTag, String description, String os) {
+    super(assetTag, description);
+    this.os = os;
+  }
 
-	public String getOs() {
-		return os;
-	}
-	
-	public String toString(){
-		String output = "";
-		// Write your codes here
-		return output;
-	}
+  public String getOs() {
+    return os;
+  }
+  
+  public String toString(){
+    String output = super.toString();
+    return String.format("%-63s -%20s", output, os);
+  }
 }
-
-
