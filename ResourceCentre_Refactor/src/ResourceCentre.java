@@ -135,17 +135,14 @@ public class ResourceCentre {
 
 	//================================= Option 1 View (CRUD - Read) =================================
 	public static String retrieveAllCamcorder(ArrayList<Camcorder> camcorderList) {
-		String output = "";
+	    String output = "";
+	    
+	    for (int i = 0; i < camcorderList.size(); i++) {
 
-		for (int i = 0; i < camcorderList.size(); i++) {
-
-			output += String.format("%-10s %-30s %-10s %-10s %-20d\n", camcorderList.get(i).getAssetTag(),
-					camcorderList.get(i).getDescription(), 
-					ResourceCentre.showAvailability(camcorderList.get(i).getIsAvailable()),
-					camcorderList.get(i).getDueDate(),camcorderList.get(i).getOpticalZoom());
-		}
-		return output;
-	}
+	output += String.format("%-84s \n", camcorderList.get(i).toString());
+	    }
+	    return output;
+	  }
 	
 	public static void viewAllCamcorder(ArrayList<Camcorder> camcorderList) {
 		ResourceCentre.setHeader("CAMCORDER LIST");
@@ -156,17 +153,14 @@ public class ResourceCentre {
 	}
 
 	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) {
-		String output = "";
-		// write your code here
-		for (int i = 0; i < chromebookList.size(); i++) {
+	    String output = "";
+	    
+	    for (int i = 0; i < chromebookList.size(); i++) {
 
-			output += String.format("%-10s %-30s %-10s %-10s %-20s\n", chromebookList.get(i).getAssetTag(),
-					chromebookList.get(i).getDescription(), 
-					ResourceCentre.showAvailability(chromebookList.get(i).getIsAvailable()),
-					chromebookList.get(i).getDueDate(),chromebookList.get(i).getOs());
-		}
-		return output;
-	}
+	      output += String.format("%-84s \n", chromebookList.get(i).toString());
+	    }
+	    return output;
+	  }
 	
 	public static void viewAllChromebook(ArrayList<Chromebook> chromebookList) {
 		
